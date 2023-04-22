@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet,ImageBackground } f
 import { ScrollView } from 'react-native-gesture-handler';
 import { userreport } from '../firebaseconfig';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Header } from "react-native-elements";
+
 
 const TakeTestML = () => {
   const [breakfast, setBreakfast] = useState('');
@@ -18,10 +18,7 @@ const TakeTestML = () => {
   const [workoutTime, setWorkoutTime] = useState('');
   const [age, setage] = useState('');
 
-  const handleLogout = () => {
-    navigation.navigate("Login");
-    };
-  
+
   const calculateCalories = () => {
     // calculate the total daily calorie intake based on the user's inputs
     const basalMetabolicRate = 10 * weight + 6.25 * height - 5 * age + 5;
@@ -86,11 +83,7 @@ const TakeTestML = () => {
     source={require('../assets/b1.jpg')}
     style={styles.background}
   >
-       <Header
-leftComponent={{ icon: "logout", color: "#fff", onPress: handleLogout }}
-
-backgroundColor="green"
-/>
+ 
 
    <ScrollView showsVerticalScrollIndicator={false}>
     <View style={styles.overlay} />

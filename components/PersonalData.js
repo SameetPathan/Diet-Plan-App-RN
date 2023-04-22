@@ -126,7 +126,6 @@ const UserDashboard = ({ navigation }) => {
   const [age, setAge] = useState('');
   const [dob, setDob] = useState('');
 
-
   useEffect(()  => {
     const dbb = getDatabase();
     AsyncStorage.getItem('phone').then((phoneNumber) => {
@@ -165,9 +164,11 @@ const UserDashboard = ({ navigation }) => {
       <View style={stylesd.header}>
         <Text style={stylesd.title}>User Dashboard</Text>
         <IconButton
-          icon="pencil"
+          icon="logout"
           size={20}
-          onPress={() => navigation.navigate('User Info')}
+          color="green"
+          backgroundColor='white'
+          onPress={() => navigation.navigate('Login')}
         />
       </View>
       <Card style={stylesd.card}>
