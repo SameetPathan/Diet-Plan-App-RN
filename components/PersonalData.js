@@ -183,7 +183,7 @@ const UserDashboard = ({ navigation }) => {
             <Text>{location}</Text>
           </View>
           <View style={stylesd.field}>
-            <Text style={stylesd.label}>Health Issue:</Text>
+            <Text style={stylesd.label}>Health Issue :</Text>
             <Text>{healthIssue}</Text>
           </View>
           <View style={stylesd.field}>
